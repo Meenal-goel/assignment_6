@@ -119,11 +119,14 @@ for k,v in user_dict.items():
 
 print("\n")
 
+
+
 #8-Take inputs from user to make a list. Again take one input from user and search it in the list and delete that element, if found. Iterate over list using for loop.
 
 e_list = []
 print("enter the list size")
 size=int(input())
+print("enter the list elements")
 #take integers from user input
 for element in range(size):
     z= int(input())
@@ -132,11 +135,11 @@ for element in range(size):
 print("Initially list is :",e_list)
 print("enter the element to be searched")
 my_key=int(input())
-for each_element in range(len(e_list)):
-    if(  my_key == e_list[each_element]):
-        print("element to be popped is ",e_list[each_element])
-        e_list = e_list.pop(e_list[each_element])
+for each_element in e_list:
+    if(  my_key == each_element):
+        print("element found")
+        print("element to be popped is ",each_element)
+        e_list.remove(each_element)
+     
+        print("updated list is:",e_list)
 
-    else:
-        print("element not found")
-print("updated list is:",e_list)
